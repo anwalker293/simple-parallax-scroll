@@ -1,23 +1,29 @@
-import logo from './logo.svg';
-import './App.css';
+import { Parallax } from "react-parallax";
+import img1 from "./images/bg1.jpeg";
+import img2 from "./images/bg2.jpeg";
+import img3 from "./images/bg3.jpeg";
+import "./App.css";
 
 function App() {
   return (
     <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
+      <Parallax strength={300} blur={{ min: -15, max: 15 }} bgImage={img1}>
+        <div className="content">
+          <div className="text-content">Parallax</div>
+        </div>
+      </Parallax>
+
+      <Parallax strength={300} blur={{ min: -15, max: 15 }} bgImage={img2}>
+        <div className="content">
+          <div className="text-content">Parallax</div>
+        </div>
+      </Parallax>
+
+      <Parallax strength={300} blur={{ min: -15, max: 15 }} bgImage={img3}>
+        <div className="content">
+          <div className="text-content">Parallax</div>
+        </div>
+      </Parallax>
     </div>
   );
 }
